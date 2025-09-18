@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise 🎂</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+
+    /* First Page */
+    #page1, #page2 {
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 1s ease;
+    }
+
+    #page1 {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      flex-direction: column;
+      text-align: center;
+    }
+
+    #page1 button {
+      padding: 20px 40px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      background: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+
+    #page1 button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Second Page */
+    #page2 {
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #page2.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    #message {
+      font-size: 2rem;
+      font-weight: bold;
+      z-index: 2;
+      background: rgba(0,0,0,0.5);
+      padding: 20px 30px;
+      border-radius: 15px;
+    }
+
+    /* Background collage */
+    #collage {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 5px;
+      z-index: 1;
+    }
+
+    #collage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- First Page -->
+  <div id="page1">
+    <h1>🎉 A Little Surprise Awaits 🎉</h1>
+    <button onclick="showPage2()">Click Me</button>
+  </div>
+
+  <!-- Second Page -->
+  <div id="page2">
+    <div id="collage">
+      <img src="images\WhatsApp Image 2025-09-18 at 11.47.47 PM (1).jpeg" alt="">
+      <img src="images\WhatsApp Image 2025-09-18 at 11.47.49 PM (1).jpeg" alt="">
+      <img src="images\WhatsApp Image 2025-09-18 at 11.47.50 PM (1).jpeg" alt="">
+      <img src="images\WhatsApp Image 2025-09-18 at 11.55.28 PM.jpeg" alt="">
+      <img src="images\WhatsApp Image 2025-09-18 at 11.47.48 PM (1).jpeg" alt="">
+      <img src="images\WhatsApp Image 2025-09-18 at 11.55.28 PM (1).jpeg" alt="">
+      <img src="images\WhatsApp Image 2025-09-18 at 11.47.47 PM.jpeg" alt="">
+      <img src="images\WhatsApp Image 2025-09-18 at 11.47.49 PM.jpeg" alt="">
+      <img src="images\WhatsApp Image 2025-09-18 at 11.47.48 PM.jpeg" alt="">
+      <img src="images\WhatsApp Image 2025-09-18 at 11.47.50 PM (2).jpeg" alt="">
+      <img src="images\WhatsApp Image 2025-09-18 at 11.47.48 PM (1).jpeg" alt="">
+      <img src="https://picsum.photos/300?random=12" alt="">
+    </div>
+    <div id="message">
+      Happiestttt birthdayyyyyy myieee lovie dovie 😭🥹💋 happy happy 17 😋bsss ek saal orr fir shadi kr lenge🙈😭 bhgwan tum khush rkhe mstt rkhe sbhi samasyao s dur rkhe chust rkhe tandrust rkhe 🥹orr as always hot rkhe🌝 pta b nii chla or ab tum tumhara 3rd b'day sath m mnaynge 😭😭😭 mostttt roler coaster ride kii trh chla gya itna sara time🥹 literally pta b nii chla kb m tum 9th k paper deri thi result btaya tha mrko gitika n orr ab agle saal college jaogi😭😭😭 pta b nii chla kb kb m tum 55-56kg s 70+kg tk pch gyi🙈🙈
+Koi gal nii h 100 b cross krnaa century bnana😎💪🏻 hawaldaro kii buari ho pta chlna chaiye dkh k hii😎😎koi kamjorr naa bol jaye💪🏻
+Orrr kamjorrr ho b nii vse 😭itiiiiiiiiii saaaariiiii problems s ek sth deal krri ho hr ksi s buss kii btt thori h🥹 vo b iti sii umr m
+But don't worry m hu na😁💋
+I am always and will be always there for uhh💋bsss ekkk awaz maar dena chakka jam kr dnge darling💪🏻 papa badmosh h🔫 orrr baki abi toh 100+ bday celebrate krne h sth m🙈 apko hmari umr lg jaye 🙈 orr baki iss b'day wish ka ant ek shayari k sth 🫴🏻
+Toh pesh h
+Dabbe m dabba dabbe m cake meri babu 10 lakh m ek🙈🙈💋
+Alabhuhhhhh myiee phirst lobhhh🥹🫶🏻💋
+Happyyy birthday once again😭💋❤️ <br>
+      Wishing you lots of joy, laughter, and unforgettable memories 💖
+    </div>
+
+    <!-- Hidden Audio Player -->
+   <audio id="bg-music" loop>
+  <source src="happy-birthday-254480.mp3" type="audio/mpeg">
+</audio>
+
+  </div>
+
+  <script>
+    function showPage2() {
+      document.getElementById("page1").style.opacity = "0";
+      setTimeout(() => {
+        document.getElementById("page1").style.display = "none";
+        document.getElementById("page2").classList.add("active");
+
+        // Play background music
+        const music = document.getElementById("bg-music");
+        music.play().catch(err => {
+          console.log("Autoplay blocked, user must interact first:", err);
+        });
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
